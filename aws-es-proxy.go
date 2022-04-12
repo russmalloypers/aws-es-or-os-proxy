@@ -420,6 +420,14 @@ func addHeaders(src, dest http.Header) {
 	if val, ok := src["Kbn-Version"]; ok {
 		dest.Add("Kbn-Version", val[0])
 	}
+	
+	if val, ok := src["Osd-Version"]; ok {
+		dest.Add("Osd-Version", val[0])
+	}
+
+	if val, ok := src["Osd-Xsrf"]; ok {
+		dest.Add("Osd-Xsrf", val[0])
+	}
 
 	if val, ok := src["Content-Type"]; ok {
 		dest.Add("Content-Type", val[0])
