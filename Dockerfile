@@ -5,9 +5,9 @@ COPY . .
 
 RUN CGO_ENABLED=0 GOOS=linux go build -o aws-es-proxy
 
-FROM alpine:3.11
+FROM alpine:3.13
 LABEL name="aws-es-proxy" \
-      version="latest"
+      version="v1.0.1"
 
 RUN apk --no-cache add ca-certificates
 WORKDIR /home/
